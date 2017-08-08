@@ -6,3 +6,5 @@ $highlight: #EDDE45;
 $off_secondary: #9BF0E9;
 $dark_gray: darken($gray, 30%);
 $text: dark($gray, 80%);
+
+@import 'animations/flash-highlight';
