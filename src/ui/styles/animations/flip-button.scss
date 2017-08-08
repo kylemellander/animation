@@ -1,0 +1,25 @@
+.flip-button-container {
+  position: relative;
+}
+.flip-button {
+  position: absolute;
+	top: 0;
+	left: 0;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 5px;
+  border: 0;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  &.complete {
+    transform: rotateX(0deg);
+  }
+  &.flip-button-front {
+    background: $primary;
+  }
+  &.flip-button-back {
+    background: $highlight;
+  }
+}
