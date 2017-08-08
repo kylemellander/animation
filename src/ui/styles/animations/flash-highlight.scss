@@ -1,2 +1,44 @@
 $highlighted-text-shadow: 0 0 0.5rem $highlight;
 $scaled-larger: scale(1.05);
+
+@keyframes flashHighlight {
+  0% {
+    transform: scale(1);
+    text-shadow: 0;
+  }
+  40% {
+    transform: $scaled-larger;
+  }
+  50% {
+    text-shadow: $highlighted-text-shadow;
+  }
+  60% {
+    text-shadow: $highlighted-text-shadow;
+    transform: $scaled-larger;
+  }
+  70% {
+    text-shadow: $highlighted-text-shadow;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0;
+  }
+}
+
+.flash-highlight {
+  &.highlight {
+    animation: 0.5s linear flashHighlight;
+  }
+}
+
+.flash-highlight-example-box {
+  height: 5rem;
+  background: $secondary;
+  color: $text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border: 1px solid $dark_gray;
+  border-radius: 5px;
+}
