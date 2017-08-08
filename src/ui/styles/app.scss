@@ -1,3 +1,8 @@
-h1 {
-  color: #444;
-}
+$gray: #b4b4b4;
+$primary: #EA3556;
+$secondary: #61D2D6;
+$off_primary: #ED146F;
+$highlight: #EDDE45;
+$off_secondary: #9BF0E9;
+$dark_gray: darken($gray, 30%);
+$text: dark($gray, 80%);
